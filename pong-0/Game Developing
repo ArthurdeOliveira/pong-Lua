@@ -1,0 +1,85 @@
+Aula 1(18/04/2020)
+
+	*Pong:
+
+	*LUA;
+	-linguagem parecida com phyton e JavaScript;
+	
+	*Löve 2d(software);
+	-Vai ser o game framework para executar e criar os jogos;
+	-Drawing Shapes;
+	-Drawing Texts;
+	
+	*Delta Time and Velocity;
+	-Uma variável muito importante que mede o tempo desde 
+	que o último frame foi executado; 
+	
+	*Game State;
+	-Estado do jogo: Menu,jogando,pause;
+	
+	*Basic OOP(Object-Oriented Programming);
+	
+	*Box Collision(Hitboxes);
+	
+	*SOund Effects(with bfrx);
+	
+	
+	Game loop:
+	
+	Um jogo é basicamente um loop infinito, como um while(true).
+	Se processa a entrada, para saber se o usuário 
+	pressionou alguma tecla no teclado ou moveu um analógico no controle.
+	Se sim o jogo deve usar essa informação para atualizar qualquer coisa
+	no estado de jogo que precisa desta informação, e o que quer que tenha 
+	mudado deve ser re-renderizado para que possamos vizualmente perceber
+	a mudança que foi feita pela entrada.
+
+	Sistema de Coordenadas 2d:
+		É um sistema onde os objetos tem as coordenadas X e Y (X,Y) e são "Desenhados'
+		de acordo com elas.
+		(0,0) seria o topo esquerdo do sistema, com direções positivas sendo para baixo 
+		e para a direita e valores negativos movendo para cima e para a esquerda.
+		(x   ,   y) (0   ,  0)
+		(largura,0) (0,altura)
+		;
+		
+		Objetivos da aula 1:
+		
+		#Desenhar formatos na tela.(raquetes e bola);
+		
+		#Controlar a posição 2d das raquetes de acordo com a entrada;
+		
+		#Detecção de colisão entre a bola e as raquetes para rebater a bola na direçãow
+		do oponente;
+		
+		#Detecção de colisão entre a bola e os limites do mapa para manter
+		a bola dentro dos limites verticais e detectar pontuação (limites horizontais);
+		
+		#Efeitos sonoros para quando a bola atingir as raquetes/paredes ou quando for feito
+		um ponto.(para ter um feedback e uma imersão maior no jogo);
+		
+		
+		#Contagem de placar para determinar um vencedor;
+		
+		Funções importantes do código pong-0:
+		
+		love.load
+		usado para inicializar o jogo no começo da execução do programa.
+		
+		love.update(dt)
+		é o delta time.dt vai ser o tempo decorrido desde o último frame.
+		vai ser uma função rodada todos após cada frame;
+		
+		love.draw()
+		Vai ser uma função rodada a cada frame pelo Löve, após uma atualização 
+		para desenhar na tela assim que elas tiverem mudado.
+		
+		love.graphics.printf(texto, x, y, [largura], [alinhamento])
+		Função de print versátil que pode alinhar texto à esquerda, direita ou ao centro da tela.
+		
+		love.window.setMode(largura, altura, params)
+		
+	usada para inicializar as dimensões da janela
+		
+		
+		
